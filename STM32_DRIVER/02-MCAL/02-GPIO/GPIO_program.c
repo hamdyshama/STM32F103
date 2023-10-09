@@ -19,13 +19,13 @@ switch(Copy_u8Port)
 	case GPIOA:
 	            if(Copy_u8Pin<=7)
 				{//Low Register
-				 GPIOA_CRL &= ~((0b111)<< (Copy_u8Pin *4));
+				 GPIOA_CRL &= ~((0b1111)<< (Copy_u8Pin *4));
 				 GPIOA_CRL |= ((Copy_u8Mode)<< (Copy_u8Pin *4));
 				}
 				else if(Copy_u8Pin<=15)
 				{//High Register
 			     Copy_u8Pin=Copy_u8Pin-8;
-				 GPIOA_CRH &= ~((0b111)<< (Copy_u8Pin *4));
+				 GPIOA_CRH &= ~((0b1111)<< (Copy_u8Pin *4));
 				 GPIOA_CRH |= ((Copy_u8Mode)<< (Copy_u8Pin *4));
 				}
 				break;
@@ -34,13 +34,13 @@ switch(Copy_u8Port)
 	case GPIOB: 
 	            if(Copy_u8Pin<=7)
 				{//Low Register  
-				 GPIOB_CRL &= ~((0b111)<< (Copy_u8Pin *4));
+				 GPIOB_CRL &= ~((0b1111)<< (Copy_u8Pin *4));
 				 GPIOB_CRH 	|=	((Copy_u8Mode) << (Copy_u8Pin * 4));
 				}
 				else if(Copy_u8Pin<=15)
 				{//High Register
 				 Copy_u8Pin=Copy_u8Pin-8;
-				 GPIOA_CRH &= ~((0b111)<< (Copy_u8Pin *4));
+				 GPIOA_CRH &= ~((0b1111)<< (Copy_u8Pin *4));
 				 GPIOA_CRH |= ((Copy_u8Mode)<< (Copy_u8Pin *4));
 				}
 				break;
@@ -50,7 +50,7 @@ switch(Copy_u8Port)
 	case GPIOC:
 	            if(Copy_u8Pin<=7)
 				{//Low Register  
-				 GPIOC_CRL &= ~((0b111)<< (Copy_u8Pin *4));
+				 GPIOC_CRL &= ~((0b1111)<< (Copy_u8Pin *4));
 				 GPIOC_CRL |=	((Copy_u8Mode) << (Copy_u8Pin * 4));
 				}
 
